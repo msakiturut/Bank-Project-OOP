@@ -16,7 +16,7 @@ import java.time.format.DateTimeFormatter;
 import Accounts.Account;
 
 public class Bank {
-	
+
     private ArrayList<Account> accounts ;
 	private Scanner scanner;
 	private Account account;
@@ -71,7 +71,7 @@ public class Bank {
 					account.deposit(Id, cash);
 					account.transactions.add("Hesaba "+cash+" TL para yatýrýldý. ("+date.now() +")");
 					System.out.println(account.getId() + " nolu hesabýnýza "+cash+" tl yatýrýldý.Toplam bakiye: "+account.getBakiye());
-
+					//withdraw da iþlemi yap
 				}
 				else 
 				{
@@ -93,7 +93,8 @@ public class Bank {
 			for (Account account : accounts) 
 			{
 				if(Id == account.getAccountId()) 
-				{
+				{//veriyi varmý diye kontrol et n de veriyi buluyor n+1 tekrar false atýyor 
+					//düzell alg yanlýs
 					if(cash <= account.getBakiye()) 
 					{
 						account.withdraw(Id, cash);
@@ -215,7 +216,9 @@ public class Bank {
 		{
 			if(account.getAccountId() == accountId) 
 			{
-				bool = true;
+				bool = true; //accounta aramak yerine id bu listenin içinde varmý diye kontrol etmen gerek
+				//yoksa listenin n.elemanýnda veriyi buluyor true yapýyor sonra n+1.elemanda tekrar false atýyor
+				//düzelt
 			}
 			else 
 			{
