@@ -62,6 +62,7 @@ public class Bank {
 	
 	public void deposit(int Id, int cash) 
 	{
+		boolean foundId=false;
 		if(!accounts.isEmpty())
 		{
 			for (Account account : accounts) 
@@ -71,23 +72,24 @@ public class Bank {
 					account.deposit(Id, cash);
 					account.transactions.add("Hesaba "+cash+" TL para yatýrýldý. ("+date.now() +")");
 					System.out.println(account.getId() + " nolu hesabýnýza "+cash+" tl yatýrýldý.Toplam bakiye: "+account.getBakiye());
+					foundId=true;
 					//withdraw da iþlemi yap
 				}
-				else 
-				{
-					System.out.println("Yanlýþ Hesap Numarasý veya bulunmayan hesap" + Id);
-				}
+				
 			}		
 		}
 		else
 		{
 			System.out.println("Oluþturulmuþ hesap yok..");
 		}
+		
+		if(foundId==false) {System.out.println("Yanlýþ Hesap id..");}
 	}
 
 	
 	public void Withdraw(int Id, int cash) 
 	{
+		boolean foundId=false;
 		if(!accounts.isEmpty())
 		{
 			for (Account account : accounts) 
@@ -95,6 +97,7 @@ public class Bank {
 				if(Id == account.getAccountId()) 
 				{//veriyi varmý diye kontrol et n de veriyi buluyor n+1 tekrar false atýyor 
 					//düzell alg yanlýs
+					foundId=true;
 					if(cash <= account.getBakiye()) 
 					{
 						account.withdraw(Id, cash);
@@ -108,16 +111,15 @@ public class Bank {
 					}
 					
 				}
-				else 
-				{
-					System.out.println("Yanlýþ Hesap Numarasý veya bulunmayan hesap" + Id);
-				}
+			
 			}
 		}
 		else 
 		{
 			System.out.println("Oluþturulmuþ hesap yok..");
 		}
+		
+		if(foundId==false) {System.out.println("Yanlýþ Hesap id..");}
 	}
 	
 	public void allAccountId_And_LastFiveTransactions() 
@@ -136,7 +138,8 @@ public class Bank {
 					}
 					count++;
 				}
-			}
+				System.out.println("--------------------------------------------------------------");
+			}			
 		}
 		else 
 		{	
@@ -216,14 +219,9 @@ public class Bank {
 		{
 			if(account.getAccountId() == accountId) 
 			{
-				bool = true; //accounta aramak yerine id bu listenin içinde varmý diye kontrol etmen gerek
-				//yoksa listenin n.elemanýnda veriyi buluyor true yapýyor sonra n+1.elemanda tekrar false atýyor
-				//düzelt
+				bool = true; 
 			}
-			else 
-			{
-				bool=false;
-			}
+			
 		}
 		
 		return bool;

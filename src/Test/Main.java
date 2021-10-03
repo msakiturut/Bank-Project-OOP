@@ -71,7 +71,7 @@ public class Main
 					System.out.print("Para yatýrmak istediðiniz hesap id:?");
 					int id=scanner.nextInt();
 					
-					if(bank.checkAccountId(id)) 
+					if(bank.checkAccountId(id)==true) 
 					{
 						System.out.print("Yatýrmak istediðiniz para miktarý:?");
 						int cash=scanner.nextInt();
@@ -90,7 +90,7 @@ public class Main
 					System.out.print("Para çekmek istediðiniz hesap id:?");
 					int id=scanner.nextInt();
 					
-					if(bank.checkAccountId(id)) 
+					if(bank.checkAccountId(id)==true) 
 					{
 						System.out.print("Çekmek istediðiniz para miktarý:?");
 						int cash=scanner.nextInt();
