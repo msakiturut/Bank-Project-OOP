@@ -45,4 +45,17 @@ Program kullanıcıya konsoldan aşağıdaki işlemleri yapabilmesini sağlamal�
 7. Show Accounts information: Tüm hesapların hesap numarasını, türünü, bakiyesini ve açılış tarihini gösterir .
 8. ShowIDs: Sistemdeki tüm hesap numaralarını listeler.
 
+![](https://github.com/sakiturut/Bank-Project-OOP/blob/master/ScreenShot/i.png)
+
+![](https://github.com/sakiturut/Bank-Project-OOP/blob/master/ScreenShot/ii.png)
+
+![](https://github.com/sakiturut/Bank-Project-OOP/blob/master/ScreenShot/iii.png)
+
+![](https://github.com/sakiturut/Bank-Project-OOP/blob/master/ScreenShot/iv.png)
+
+![](https://github.com/sakiturut/Bank-Project-OOP/blob/master/ScreenShot/v.png)
+
+![](https://github.com/sakiturut/Bank-Project-OOP/blob/master/ScreenShot/vi.png)
+
+![](https://github.com/sakiturut/Bank-Project-OOP/blob/master/ScreenShot/vii.png)
 
