@@ -1,8 +1,0 @@
-her id özeldir.. var olan bir id ile hesap oluþturulmaaz..
-faiz hesaplarýný yap..
-devam tamam ekle iþlem seçmekten sonra .. hemen ekrana seöenekler gelmesin 
-Ana ekran ekle secenekler gelsin..ona gore secenek yap, iþlemden sonra gelsin..
-
-
-
-** son 5 iþlemi yapma konusunu yap!!
