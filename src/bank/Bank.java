@@ -73,7 +73,6 @@ public class Bank {
 					account.transactions.add("Hesaba "+cash+" TL para yatýrýldý. ("+date.now() +")");
 					System.out.println(account.getId() + " nolu hesabýnýza "+cash+" tl yatýrýldý.Toplam bakiye: "+account.getBakiye());
 					foundId=true;
-					//withdraw da iþlemi yap
 				}
 				
 			}		
@@ -95,8 +94,7 @@ public class Bank {
 			for (Account account : accounts) 
 			{
 				if(Id == account.getAccountId()) 
-				{//veriyi varmý diye kontrol et n de veriyi buluyor n+1 tekrar false atýyor 
-					//düzell alg yanlýs
+				{
 					foundId=true;
 					if(cash <= account.getBakiye()) 
 					{
