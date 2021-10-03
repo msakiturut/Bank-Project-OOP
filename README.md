@@ -25,9 +25,13 @@ programda 4 tür hesap için şu kurallar tanımlamalı:
 Tüm sistemi kontrol etmesi için başka bir sınıf (Bank) tanımlanmalıdır.
 Bu sınıfta Account türünden bir değişken olmalı. (Account accounts). Bu değişken tüm hesapları tutar.
 Bu sınıf şu fonksiyonlara sahip olmalıdır:
+
 • getAccount : mevcut hesapların listesini görüntülemeye yarar.
+
 • getDate: sistemin şu anki tarihini görüntülemeye yarar.
+
 • deposit(ID, cash): ID’si belirtilen hesaba, belirtilen miktarda para yatırma işlemi yapmaya yarar.
+
 • Withdraw(ID, cash): eğer mümkün ise, belirtilen miktarda hesaptan para çekme işlemi yapar.
 (transaction işleminin başarılı ya da başarısız olması gibi durumlar kullanıcıya bildirilir.)
 
